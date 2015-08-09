@@ -67,8 +67,7 @@ gdata$DateTime <- as.POSIXct(strptime(paste0(gdata$Date," ",gdata$Time),"%d/%m/%
 ## generate png file
 ##
 cat(paste0("generating PNG plot in file ",cv_plot_id,".png\n"))
-
-png(paste0(cv_plot_id,".png"),width=480,height=480)
+png(paste0(cv_plot_id,".png"),width=480,height=480,bg="transparent")
 with(gdata,hist(Global_active_power,col="red",main="Global Active Power",
                 xlab="Global Active Power (kilowatts)"))
 dev.off()

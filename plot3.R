@@ -67,7 +67,7 @@ gdata$DateTime <- as.POSIXct(strptime(paste0(gdata$Date," ",gdata$Time),"%d/%m/%
 ## generate png file
 ##
 cat(paste0("generating PNG plot in file ",cv_plot_id,".png\n"))
-png(paste0(cv_plot_id,".png"),width=480,height=480)
+png(paste0(cv_plot_id,".png"),width=480,height=480,bg="transparent")
 
 with(gdata,plot(DateTime,Sub_metering_1,col="black",type="l",lty=1,ylab="Energy sub metering",xlab=""))
 with(gdata,lines(DateTime,Sub_metering_2,col="red"))
